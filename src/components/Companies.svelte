@@ -32,6 +32,11 @@
       color: rgb(150, 55, 76);
     }
   }
+  @media (min-width: 960px) {
+    .logos-wrapper {
+      flex-direction: row;
+    }
+  }
 </style>
 
 <div class="wrapper">

@@ -10,6 +10,8 @@
     justify-content: center;
     align-items: center;
     background-size: cover;
+
+    height: 70vh;
   }
   .solutions {
     margin: 60px 0 30px 0;
@@ -62,6 +64,18 @@
       }
     }
   }
+  @media (min-width: 960px) {
+    .wrapper {
+      flex-direction: row;
+      padding: 50px;
+    }
+    .solutions {
+      width: 50%;
+    }
+    .register {
+      width: 50%;
+    }
+  }
 </style>
 
 <div
@@ -80,7 +94,7 @@
     <input placeholder="Name" />
     <input placeholder="Email" />
     <input placeholder="Phone Number" />
-    <input placeholder="Password" />
+    <input type="password" placeholder="Password" />
     <button>Register Account</button>
   </div>
 </div>

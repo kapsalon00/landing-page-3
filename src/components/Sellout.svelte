@@ -42,38 +42,48 @@
       color: lightgreen;
     }
   }
+  @media (min-width: 960px) {
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 </style>
 
 <div class="wrapper">
   <h1 data-aos="fade-up">Why choose us?</h1>
-  <div data-aos="fade-right" class="card">
-    <div class="img a">
-      <MdBlurOn />
+  <div class="container">
+    <div data-aos="fade-right" class="card">
+      <div class="img a">
+        <MdBlurOn />
+      </div>
+      <h1>Fresh</h1>
+      <p>
+        Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus
+        lacinia id erat eu ullamcorper. Nunc id ipsum.
+      </p>
     </div>
-    <h1>Fresh</h1>
-    <p>
-      Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus
-      lacinia id erat eu ullamcorper. Nunc id ipsum.
-    </p>
-  </div>
-  <div data-aos="fade-up" class="card">
-    <div class="img b">
-      <MdDoneAll />
+    <div data-aos="fade-up" class="card">
+      <div class="img b">
+        <MdDoneAll />
+      </div>
+      <h1>Design</h1>
+      <p>
+        Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus
+        lacinia id erat eu ullamcorper. Nunc id ipsum.
+      </p>
     </div>
-    <h1>Design</h1>
-    <p>
-      Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus
-      lacinia id erat eu ullamcorper. Nunc id ipsum.
-    </p>
-  </div>
-  <div data-aos="fade-left" class="card">
-    <div class="img c">
-      <MdEuroSymbol />
+    <div data-aos="fade-left" class="card">
+      <div class="img c">
+        <MdEuroSymbol />
+      </div>
+      <h1>Safe</h1>
+      <p>
+        Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus
+        lacinia id erat eu ullamcorper. Nunc id ipsum.
+      </p>
     </div>
-    <h1>Safe</h1>
-    <p>
-      Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus
-      lacinia id erat eu ullamcorper. Nunc id ipsum.
-    </p>
   </div>
 </div>

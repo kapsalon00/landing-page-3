@@ -13,6 +13,15 @@
     width: 180px;
     height: 50px;
   }
+  @media (min-width: 960px) {
+    .wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 100px;
+    }
+  }
 </style>
 
 <div class="wrapper">

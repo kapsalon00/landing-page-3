@@ -7,6 +7,11 @@
   import Sellout from "./components/Sellout.svelte";
   import Getstarted from "./components/Getstarted.svelte";
   import Trees from "./components/Trees.svelte";
+  import Pricing from "./components/Pricing.svelte";
+  import Faq from "./components/Faq.svelte";
+  import Honorable from "./components/Honorable.svelte";
+  import Contact from "./components/Contact.svelte";
+  import Footer from "./components/Footer.svelte";
 
   onMount(() => {
     AOS.init({
@@ -29,4 +34,9 @@
   <Sellout />
   <Getstarted />
   <Trees />
+  <Pricing />
+  <Faq />
+  <Honorable />
+  <Contact />
+  <Footer />
 </div>

@@ -30,6 +30,25 @@
       object-fit: cover;
     }
   }
+  @media (min-width: 960px) {
+    .left,
+    .right {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 0 20px;
+    }
+    .image,
+    .text {
+      margin: 10px;
+      width: 50%;
+    }
+    .image {
+      width: 480px;
+      height: 480px;
+    }
+  }
 </style>
 
 <div class="wrapper">
