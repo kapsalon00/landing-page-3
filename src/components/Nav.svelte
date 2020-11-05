@@ -57,8 +57,13 @@
       margin: 0 10px;
       &:hover {
         border-bottom: 1px solid white;
-        border-top: 1px solid white;
       }
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .navbar {
+      padding: 10px 20%;
     }
   }
 </style>
@@ -76,24 +81,24 @@
     {#if isOpen}
       <div class="modal">
         <div class="modal-content">
-          <a href="/">Home</a>
-          <a href="/">Why Choose Us</a>
-          <a href="/">Overview</a>
-          <a href="/">Pricing</a>
-          <a href="/">Faq's</a>
-          <a href="/">Contact</a>
-          <a href="/">Login</a>
+          <a href="/" on:click={() => (isOpen = false)}>Home</a>
+          <a href="#why" on:click={() => (isOpen = false)}>Why Choose Us</a>
+          <a href="#overview" on:click={() => (isOpen = false)}>Overview</a>
+          <a href="#pricing" on:click={() => (isOpen = false)}>Pricing</a>
+          <a href="#faq" on:click={() => (isOpen = false)}>Faq's</a>
+          <a href="#contact" on:click={() => (isOpen = false)}>Contact</a>
+          <a href="/" on:click={() => (isOpen = false)}>Login</a>
         </div>
       </div>
     {/if}
   {:else}
     <div class="links-wrapper">
       <a href="/">Home</a>
-      <a href="/">Why Choose Us</a>
-      <a href="/">Overview</a>
-      <a href="/">Pricing</a>
-      <a href="/">Faq's</a>
-      <a href="/">Contact</a>
+      <a href="#why">Why Choose Us</a>
+      <a href="#overview">Overview</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">Faq's</a>
+      <a href="#contact">Contact</a>
       <a href="/">Login</a>
     </div>
   {/if}

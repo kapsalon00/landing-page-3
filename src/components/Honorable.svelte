@@ -61,6 +61,8 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      width: 900px;
+      margin: 0 auto;
       .left {
         width: 50%;
         .image {

@@ -1,4 +1,5 @@
 <script>
+  let pricing = "weekly";
 </script>
 
 <style lang="scss">
@@ -43,14 +44,14 @@
       }
     }
   }
-  .primary {
+  .button-active {
     width: 100px;
     height: 40px;
-    background-color: rgb(54, 54, 54);
-    color: white;
-    cursor: pointer;
+    background-color: rgb(54, 54, 54) !important;
+    color: white !important;
+    cursor: pointer !important;
   }
-  .secondary {
+  .button {
     width: 100px;
     height: 40px;
     background-color: rgb(247, 247, 247);
@@ -71,48 +72,100 @@
 <div class="wrapper">
   <h1 data-aos="zoom-in" style="text-align:center;">Pricing Plans</h1>
   <div class="button--wrapper">
-    <button class="primary">WEEKLY</button>
-    <button class="secondary">MONTHLY</button>
+    <button
+      class="button"
+      class:button-active={pricing == 'weekly'}
+      on:click={() => (pricing = 'weekly')}>WEEKLY</button>
+    <button
+      class="button"
+      class:button-active={pricing == 'monthly'}
+      on:click={() => (pricing = 'monthly')}>MONTHLY</button>
   </div>
-  <div class="card--wrapper">
-    <div data-aos="zoom-in-up" class="card">
-      <h1>Basic</h1>
-      <h1>Free</h1>
-      <p>100MB Disk Space</p>
-      <p>2 Sub Domains</p>
-      <p>5 Email Accounts</p>
-      <p>24/7 support</p>
-      <button>Select</button>
-    </div>
+  {#if pricing == 'weekly'}
+    <div class="card--wrapper">
+      <div data-aos="zoom-in-up" class="card">
+        <h1>Basic</h1>
+        <h1>Free</h1>
+        <p>100MB Disk Space</p>
+        <p>2 Sub Domains</p>
+        <p>5 Email Accounts</p>
+        <p>24/7 support</p>
+        <button>Select</button>
+      </div>
 
-    <div data-aos="zoom-in-up" class="card">
-      <h1>Standard</h1>
-      <h1>$30/mon</h1>
-      <p>100MB Disk Space</p>
-      <p>2 Sub Domains</p>
-      <p>5 Email Accounts</p>
-      <p>24/7 support</p>
-      <button>Select</button>
-    </div>
+      <div data-aos="zoom-in-up" class="card">
+        <h1>Standard</h1>
+        <h1>$30/week</h1>
+        <p>100MB Disk Space</p>
+        <p>2 Sub Domains</p>
+        <p>5 Email Accounts</p>
+        <p>24/7 support</p>
+        <button>Select</button>
+      </div>
 
-    <div data-aos="zoom-in-up" class="card">
-      <h1>Business</h1>
-      <h1>$90/mon</h1>
-      <p>100MB Disk Space</p>
-      <p>2 Sub Domains</p>
-      <p>5 Email Accounts</p>
-      <p>24/7 support</p>
-      <button>Select</button>
-    </div>
+      <div data-aos="zoom-in-up" class="card">
+        <h1>Business</h1>
+        <h1>$90/week</h1>
+        <p>100MB Disk Space</p>
+        <p>2 Sub Domains</p>
+        <p>5 Email Accounts</p>
+        <p>24/7 support</p>
+        <button>Select</button>
+      </div>
 
-    <div data-aos="zoom-in-up" class="card">
-      <h1>Basic</h1>
-      <h1>$120/mon</h1>
-      <p>100MB Disk Space</p>
-      <p>2 Sub Domains</p>
-      <p>5 Email Accounts</p>
-      <p>24/7 support</p>
-      <button>Select</button>
+      <div data-aos="zoom-in-up" class="card">
+        <h1>Basic</h1>
+        <h1>$120/week</h1>
+        <p>100MB Disk Space</p>
+        <p>2 Sub Domains</p>
+        <p>5 Email Accounts</p>
+        <p>24/7 support</p>
+        <button>Select</button>
+      </div>
     </div>
-  </div>
+  {/if}
+
+  {#if pricing == 'monthly'}
+    <div class="card--wrapper">
+      <div data-aos="zoom-in-up" class="card">
+        <h1>Basic</h1>
+        <h1>Free</h1>
+        <p>100MB Disk Space</p>
+        <p>2 Sub Domains</p>
+        <p>5 Email Accounts</p>
+        <p>24/7 support</p>
+        <button>Select</button>
+      </div>
+
+      <div data-aos="zoom-in-up" class="card">
+        <h1>Standard</h1>
+        <h1>$30/mon</h1>
+        <p>100MB Disk Space</p>
+        <p>2 Sub Domains</p>
+        <p>5 Email Accounts</p>
+        <p>24/7 support</p>
+        <button>Select</button>
+      </div>
+
+      <div data-aos="zoom-in-up" class="card">
+        <h1>Business</h1>
+        <h1>$90/mon</h1>
+        <p>100MB Disk Space</p>
+        <p>2 Sub Domains</p>
+        <p>5 Email Accounts</p>
+        <p>24/7 support</p>
+        <button>Select</button>
+      </div>
+
+      <div data-aos="zoom-in-up" class="card">
+        <h1>Basic</h1>
+        <h1>$120/mon</h1>
+        <p>100MB Disk Space</p>
+        <p>2 Sub Domains</p>
+        <p>5 Email Accounts</p>
+        <p>24/7 support</p>
+        <button>Select</button>
+      </div>
+    </div>
+  {/if}
 </div>

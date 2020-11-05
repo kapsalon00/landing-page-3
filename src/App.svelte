@@ -28,15 +28,27 @@
 </svelte:head>
 
 <div class="wrapper">
-  <Nav />
+  <div id="home">
+    <Nav />
+  </div>
   <Hero />
   <Companies />
-  <Sellout />
+  <div id="why">
+    <Sellout />
+  </div>
   <Getstarted />
-  <Trees />
-  <Pricing />
-  <Faq />
+  <div id="overview">
+    <Trees />
+  </div>
+  <div id="pricing">
+    <Pricing />
+  </div>
+  <div id="faq">
+    <Faq />
+  </div>
   <Honorable />
-  <Contact />
+  <div id="contact">
+    <Contact />
+  </div>
   <Footer />
 </div>

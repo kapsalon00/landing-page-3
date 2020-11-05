@@ -86,6 +86,18 @@
       }
     }
   }
+
+  @media (min-width: 1680px) {
+    .address,
+    .quick-links,
+    .newsletter {
+      display: flex;
+
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+    }
+  }
 </style>
 
 <div class="wrapper">
@@ -96,7 +108,7 @@
       </div>
       <h1>Landing</h1>
     </div>
-    <p>
+    <p style="text-align:center">
       Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
       Nulla quis lorem ipnut libero malesuada feugiat. Lorem ipsum dolor sit
       amet, consectetur elit.
